@@ -14,6 +14,7 @@ import java.lang.Math;      // abs()
  * @author: Daniel Frey
  **/
 
+// driver class
 public class Assignment2
 {
     public static void main(String[] args)
@@ -33,8 +34,8 @@ class RandomNumberGuess
 {
     private final int NUM_MIN = 1;
     private final int NUM_MAX = 100;
-    private final int MAX_DIFF = 10;    // max difference between rand num and user guess
-    private int numGuess = 0; // initialize number of guesses to 0
+    private final int MAX_DIFF = 10;    // max difference between rand num and user guess for correct
+    private int numGuess = 0; // number of guesses
     private final int MAX_GUESS = 5;
     private int userGuess;  // input guess from user
     private Random rand = new Random();
