@@ -20,6 +20,7 @@ public class Assignment2
     {
         // starting point, init class instance
         RandomNumberGuess game = new RandomNumberGuess();
+        game.startGuessing();
     }
 } // Assignment2
 
@@ -49,19 +50,24 @@ class RandomNumberGuess
     public void startGuessing()
     {
         // prompt user to start guessing
-        System.out.println("Enter your guess for a number between " + NUM_MIN + " and " + NUM_MAX + " : ");
+        System.out.print("Enter your guess for a number between " + NUM_MIN + " and " + NUM_MAX + ": ");
+
+        boolean check;  // user answer in range
 
         // loop max 5 times/guesses
         do
         {
             this.getInput();
 
-            boolean check = checkGuess();
+            check = checkGuess();
+
+            // increment guess counter
+            this.numGuess++;
 
             // output message
-            System.out.println(determineOutput(check));
+            System.out.print(determineOutput(check));
         }
-        while((this.numGuess != 5) || (!this.checkGuess()));
+        while((this.numGuess != MAX_GUESS) || (!check));
 
     } // startGuessing
 
@@ -100,12 +106,12 @@ class RandomNumberGuess
         if (inRange)
         {
             // output correct answer
-            message = String.format("Correct answer: %d", this.RAND_NUM);
+            message = String.format("Correct answer: %d\n", this.RAND_NUM);
         }
         else if(this.numGuess == MAX_GUESS)
         {
             // say sorry, give answer
-            message = String.format("Sorry! Correct answer: %d", this.RAND_NUM);
+            message = String.format("Sorry! Correct answer: %d\n", this.RAND_NUM);
         }
         else
         {
