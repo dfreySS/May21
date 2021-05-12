@@ -1,5 +1,6 @@
 package com.ss.may21;
 
+import java.lang.String;
 
 /**
  * Write a Java program that prints out the following patterns::
@@ -37,8 +38,12 @@ public class Assignment1
     public static void main(String[] args)
     {
         final int START_NUM = 1;
+
         // starting point, init class instance
         SpecificOutput pattern = new SpecificOutput(START_NUM);
+
+        // start making the output
+        pattern.buildOutput();
     } // main
 } // Assignment1
 
@@ -46,7 +51,7 @@ public class Assignment1
 class SpecificOutput
 {
     private int count;  // problem counter
-    private int MAX_ROWS;   // max num of rows of star output
+    private int maxRows;   // max num of rows of star output
 
     // constructor
     public SpecificOutput()
@@ -58,17 +63,18 @@ class SpecificOutput
     public SpecificOutput(int startNum)
     {
         this.count = startNum;
+        this.maxRows = 4;
     }
 
     // starts building the specific output
     public void buildOutput()
     {
-        for (this.count; this.count < 5; this.count++)
+        for (; this.count < 5; this.count++)
         {
             // print problem number
             System.out.println(this.count + ")");
 
-            // determin which problem to output
+            // determine which problem to output
             switch (this.count)
             {
                 case 1:
@@ -92,7 +98,7 @@ class SpecificOutput
     private void increaseLeftPyramid()
     {
         // loop through rows of stars
-        for(int row = 1; row <= MAX_ROWS; row++)
+        for(int row = 1; row <= maxRows; row++)
         {
             System.out.println("*".repeat(row));
         } // for
@@ -108,7 +114,7 @@ class SpecificOutput
         System.out.println(dottedLine(10));
 
         // loop through rows of stars
-        for(int row = MAX_ROWS; row >= 1; row--)
+        for(int row = maxRows; row >= 1; row--)
         {
             System.out.println("*".repeat(row));
         } // for
@@ -120,7 +126,7 @@ class SpecificOutput
         int numSpaces = 5;
 
         // loop through rows of stars
-        for(int row = 1; row <= MAX_ROWS; row = row + 2)
+        for(int row = 1; row <= maxRows + 3; row = row + 2)
         {
             // output leading spaces then stars
             System.out.println(" ".repeat(numSpaces) + "*".repeat(row));
@@ -140,19 +146,13 @@ class SpecificOutput
         int numSpaces = 2;
 
         // loop through rows of stars
-        for(int row = MAX_ROWS; row >= 1; row = row - 2)
+        for (int row = maxRows + 3; row >= 1; row = row - 2)
         {
             // output leading spaces then stars
             System.out.println(" ".repeat(numSpaces) + "*".repeat(row));
             numSpaces++;
         }
     } // decreaseCenterPyramid
-
-    // increments the problem counter by 1
-    private void incrementCounter()
-    {
-        this.count++;
-    } // incrementCounter
 
     // returns a string of '.' chars of specified length
     private String dottedLine(int length)
