@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5c05a6d-ae27-4027-bdbe-6f47760f669e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ss/may21/Assignment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ss/may21/Assignment1.java" afterDir="false" />
-    </list>
+    <list default="true" id="a5c05a6d-ae27-4027-bdbe-6f47760f669e" name="Default Changelist" comment="fixed str.repeat() issue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +54,36 @@
       <option name="presentableId" value="Default" />
       <updated>1620769239299</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixed str.repeat() issue">
+      <created>1620787953689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620787953689</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed str.repeat() issue">
+      <created>1620788096613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620788096613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed str.repeat() issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed str.repeat() issue" />
   </component>
 </project>
